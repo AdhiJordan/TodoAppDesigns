@@ -12,7 +12,7 @@ export const getRestApiVal = (val) => {
 	console.log("maggie", val);
 	if(val !== null) {
 	return (d) => {
-	fetch('http://localhost:4039/api/setUpTodos').then((res) => {
+	fetch('http://localhost:4040/api/setUpTodos').then((res) => {
     	res.json().then((response) => {
     		console.log("cehck the res--->", response);
     		return d({
@@ -40,7 +40,7 @@ export const getGenderVal = (val) => {
 	if(val !== null && val !== undefined){
 	return (d) => {
 	
-	fetch('http://localhost:4039/api/gender/' +val).then((res) => {
+	fetch('http://localhost:4040/api/gender/' +val).then((res) => {
     	res.json().then((response) => {
     		return d({
 	    		type :GET_GENDER_DATA , 
@@ -65,7 +65,7 @@ export const getCityVal = (val) => {
 	if(val !== null && val !== undefined){
 	return (d) => {
 	
-	fetch('http://localhost:4039/api/city/' +val).then((res) => {
+	fetch('http://localhost:4040/api/city/' +val).then((res) => {
     	res.json().then((response) => {
     		return d({
 	    		type: GET_CITY_DATA , 
